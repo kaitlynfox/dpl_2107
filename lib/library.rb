@@ -44,4 +44,17 @@ class Library
     # return the hash
     hash
   end
+
+  def checkout(book)
+    # if @books == nil (nothing in library)
+    # then return false
+    false if @books == []
+
+    # If @books != nil,
+    # Check if book is in the library
+    # @books.each do |book|
+    #   require 'pry'; binding.pry
+    #
+    # end
+  end
 end
