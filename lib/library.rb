@@ -19,4 +19,29 @@ class Library
       @books << book
     end
   end
+
+  def publication_time_frame_for(author)
+    array =  []
+    hash = {}
+
+    # iterate through publication years and compare
+    # minimum is the start; maximum is the end
+    author.books.each do |book|
+      # turn string into an integar
+      # put integer into array
+      # first element is start
+      # last element is end
+      array << book.publication_year.to_i
+    end
+
+    # sort array values least to greatest
+    sorted_array = array.sort
+
+    # set up the hash with keys and values
+    hash[:start] = sorted_array.first.to_s
+    hash[:end] = sorted_array.last.to_s
+
+    # return the hash
+    hash
+  end
 end
