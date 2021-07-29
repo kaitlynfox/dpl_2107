@@ -11,6 +11,4 @@ class Book
     @publication_date = hash[:publication_date]
     @publication_year = publication_date[(publication_date.length-4)..(publication_date.length-1)]
   end
-
-
 end
